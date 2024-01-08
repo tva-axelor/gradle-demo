@@ -6,6 +6,23 @@ plugins {
     id 'demo_multiproject.java-application-conventions'
 }
 
+task t1{
+println "Hello"
+}
+task t2{
+println "Hii"}
+t2.dependsOn t1
+task t3{
+	dependsOn t1
+
+	doLast{
+		println "Last"
+	}
+	doFirst{
+	println "Hei"
+	}
+	println "Hii in t3"
+}
 dependencies {
     implementation 'org.apache.commons:commons-text'
     implementation project(':utilities')
