@@ -1,0 +1,6 @@
+plugins{
+	id('java')
+}
+
+task t1{
+println 'Helo'}
