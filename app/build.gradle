@@ -8,9 +8,10 @@ plugins {
 
 task t1{
 println "Hello"
+description 'Hello this is descriptions'
 }
-task t2{
-println "Hii"}
+task t2{doLast{
+println "Hii"}}
 t2.dependsOn t1
 task t3{
 	dependsOn t1
